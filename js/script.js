@@ -1,28 +1,65 @@
-let ingresarNombre = prompt("Choose your user name");
-let deseaJugar = prompt("Wanna play?: \n- YES \n- NO");
+//CREAR UN CICLO
+
+let ingresarNombre = prompt("Ingresa tu Nombre");
+let deseaJugar = prompt("Querés Jugar?: \n- Si \n- No");
 
 
 
-if (deseaJugar == "YES") {
-    let elejiAvatar = prompt("Select your avatar: \n- ANNIKA \n- SOUKA")
-    alert(" WELCOME TO OUR WORLD " + elejiAvatar)
+if (deseaJugar == "Si") {
+    let seleccionaPlataforma = prompt("Plataforma?: \n- Blue \n- Pink")
+    alert(" Bienvenidx a  " + seleccionaPlataforma)
     for (let i = 1; i <= 2; i++) {
 
         if (i === 2) {
-            alert("HURRY UP!!")
+            alert("Apurate!!")
         }
     
-        let ingresarJugadores = prompt("Number of players")
-        alert(" You Are " + ingresarJugadores + "." + "\n Initializing:" + i)
+        let ingresarJugadores = prompt("Número de jugadores por equipo")
+        alert(" Ustedes son " + ingresarJugadores + "." + "\n Initializing:" + i)
        
     }
-    alert("THE ROOM IS FULL, COME BACK LATER")
+    alert("La sala está completa. Volvé más tarde")
 }
 
 
-if (deseaJugar == "NO") {
-    alert("BYE BYE HUMANO")
+if (deseaJugar == "No") {
+    alert("Aún podés comprar tus SKINS")
 }
+
+//SIMULADOR INTERACTIVO
+
+let nombreA = "Annika"
+let nombreB = "Souka"
+let nombreC = "Razen"
+
+let stock = 3
+let precio = 1000
+
+let skin = prompt("Selecciona la skin deseada: \n- Annika \n- Souka \n- Razen")
+let cantidad = prompt("Selecciona la cantidad de skins deseadas: ")
+let precioTotal = (cantidad * precio)
+
+
+alert("El precio total es: " + precioTotal)
+
+let descuento = prompt("Sorpresa?: \n- Si \n- No")
+
+if (descuento == "Si") {
+    alert("Tenés un descuento del 10%")
+    var precioDescuento = precioDescuento(precioTotal)
+    alert("El precio total con descuento es es de: $" + precioDescuento)
+
+}
+
+function precioDescuento(precioTotal) {
+    return precioTotal * 0.90
+}
+
+
+if (descuento == "No") {
+    alert("Total a pagar: " + precioTotal)
+}
+
 
 
 
